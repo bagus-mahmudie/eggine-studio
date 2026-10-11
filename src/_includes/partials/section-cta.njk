@@ -1,0 +1,85 @@
+<section class="relative bg-ink py-16 sm:py-20 overflow-hidden">
+  <!-- GRID background -->
+  <div class="pointer-events-none absolute inset-0 -z-10">
+
+    <div
+    class="absolute
+            left-[-200px] sm:left-[-80px] md:left-[-80px]       
+            lg:left-[-50px]                    
+            top-[30px] sm:top-[150px]
+            h-[180px] w-[180px]
+            rounded-full bg-limeEgg/50 blur-[150px] md:blur-[180px]"
+    ></div>
+
+    <div
+    class="absolute
+            right-[-200px] sm:right-[-80px] md:right-[-80px]       
+            lg:right-[-50px]                    
+            top-[30px] sm:top-[150px]
+            h-[180px] w-[180px]
+            rounded-full bg-limeEgg/50 blur-[150px] md:blur-[180px]"
+    ></div>
+
+  </div>
+
+  <div
+    class="pointer-events-none absolute inset-0 opacity-[0.55]"
+    style="
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,.1) 1px, transparent 2px),
+        linear-gradient(to bottom, rgba(255,255,255,.1) 1px, transparent 2px);
+      background-size: 90px 90px;
+      background-position: center;
+    "
+  ></div>
+
+  <!-- Fade blur TOP -->
+  <div class="pointer-events-none absolute top-0 inset-x-0 h-24 sm:h-28">
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0A0C19] to-transparent"></div>
+    <div class="absolute inset-0 blur-2xl bg-[#0A0C19]/70"></div>
+  </div>
+
+  <!-- Fade blur BOTTOM -->
+  <div class="pointer-events-none absolute bottom-0 inset-x-0 h-24 sm:h-28">
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0A0C19] to-transparent"></div>
+    <div class="absolute inset-0 blur-2xl bg-[#0A0C19]/70"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl leading-[1.25] sm:leading-[1.3] lg:leading-[1.35] font-semibold text-white text-center">
+    <span class="block">See more ways our</span>
+    <span class="block">
+        <span class="text-limeEgg">games</span> can inspire you
+    </span>
+    </h2>
+
+    <p class="mt-8 text-white/45 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
+      From creation to launch, we simplify every step of your game development process.
+    </p>
+
+    <!-- Input -->
+    <form class="mt-12 flex justify-center">
+      <div
+        class="w-full max-w-xl rounded-2xl border border-white/10 bg-[#D6ED6B1A] shadow-[0_18px_55px_rgba(0,0,0,.45)]
+               px-4 py-2 sm:px-5 sm:py-2 flex items-center gap-3"
+      >
+        <input
+          type="email"
+          placeholder="Your email address"
+          class="w-full bg-transparent outline-none text-white/85 placeholder:text-white/45 text-base sm:text-lg"
+        />
+
+        <button
+          type="submit"
+          class="shrink-0 h-10 w-10 sm:h-11 sm:w-11 rounded-full bg-limeEgg text-black
+                 flex items-center justify-center shadow-[0_14px_28px_rgba(0,0,0,.35)]
+                 hover:brightness-95 transition"
+          aria-label="Submit"
+        >
+          <i class="bi bi-arrow-right"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,116 @@
+<header class="relative z-500 glass shadow-pill rounded-2xlplus px-4 sm:px-6 py-3">
+  <div class="flex items-center justify-between gap-3">
+    <!-- Logo -->
+    <!-- Logo (tanpa kotak) -->
+    <a href="/" class="flex items-center gap-2">
+    <img
+        src="/assets/img/logo.png"
+        alt="Eggine Studio"
+        class="h-8 sm:h-9 w-auto object-contain"
+    />
+    </a>
+
+
+    <!-- Menu (desktop/tablet) -->
+    <nav class="hidden md:flex items-center gap-7 text-lg">
+      {% set url = page.url | default('') %}
+
+      {% set isHome   = (url == '/') %}
+      {% set isGames  = url.indexOf('/games/') == 0 %}
+      {% set isAbout  = url.indexOf('/about/') == 0 %}
+      {% set isCareer = url.indexOf('/career/') == 0 %}
+      {% set isBlog   = url.indexOf('/blog/') == 0 %}
+
+      <a
+        href="/"
+        {% if isHome %}aria-current="page"{% endif %}
+        class="transition text-white/70 hover:text-white aria-[current=page]:text-white aria-[current=page]:opacity-100 aria-[current=page]:font-medium "
+      >
+        Home
+      </a>
+
+      <a
+        href="/games/"
+        {% if isGames %}aria-current="page"{% endif %}
+        class="transition text-white/70 hover:text-white aria-[current=page]:text-white aria-[current=page]:opacity-100 aria-[current=page]:font-medium"
+      >
+        Games
+      </a>
+
+      <a
+        href="/about/"
+        {% if isAbout %}aria-current="page"{% endif %}
+        class="transition text-white/70 hover:text-white aria-[current=page]:text-white aria-[current=page]:opacity-100 aria-[current=page]:font-medium"
+      >
+        About us
+      </a>
+
+      <a
+        href="/career/"
+        {% if isCareer %}aria-current="page"{% endif %}
+        class="transition text-white/70 hover:text-white aria-[current=page]:text-white aria-[current=page]:opacity-100 aria-[current=page]:font-medium"
+      >
+        Career
+      </a>
+
+      <a
+        href="/blog/"
+        {% if isBlog %}aria-current="page"{% endif %}
+        class="transition text-white/70 hover:text-white aria-[current=page]:text-white aria-[current=page]:opacity-100 aria-[current=page]:font-medium"
+      >
+        Blog
+      </a>
+    </nav>
+
+
+    <!-- Right -->
+    <div class="flex items-center gap-2 sm:gap-3">
+      <!-- Globe dropdown -->
+        <div class="relative hidden sm:block" data-lang>
+        <button
+            type="button"
+            class="inline-flex items-center gap-2 h-11 px-4 rounded-xl
+                text-white/85 hover:text-white transition"
+            aria-haspopup="true"
+            aria-expanded="false"
+            data-lang-btn
+        >
+            <i class="bi bi-globe2 text-[18px] leading-none"></i>
+            <i class="bi bi-chevron-down text-[14px] opacity-80"></i>
+        </button>
+
+        <!-- Dropdown menu -->
+        <div
+            class="absolute right-0 mt-2 w-44 rounded-xl glass subtle-outline shadow-soft
+                overflow-hidden hidden"
+            role="menu"
+            data-lang-menu
+        >
+            <button class="w-full text-left px-4 py-2.5 text-sm text-white/85 hover:bg-white/5"
+                    role="menuitem" data-lang-item="EN">
+            English
+            </button>
+            <button class="w-full text-left px-4 py-2.5 text-sm text-white/85 hover:bg-white/5"
+                    role="menuitem" data-lang-item="ID">
+            Indonesia
+            </button>
+            <button class="w-full text-left px-4 py-2.5 text-sm text-white/85 hover:bg-white/5"
+                    role="menuitem" data-lang-item="JP">
+            日本語
+            </button>
+        </div>
+        </div>
+
+      <a href="/contact/" class="inline-flex items-center justify-center h-10 sm:h-11 px-4 sm:px-5 rounded-xl bg-limeEgg text-black font-semibold shadow-soft hover:brightness-95 transition">
+        Contact Us
+      </a>
+
+      <button class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-xl glass subtle-outline" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-white/80">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+

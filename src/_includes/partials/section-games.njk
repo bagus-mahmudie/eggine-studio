@@ -1,0 +1,55 @@
+<section class="relative pt-6 sm:pt-10 lg:pt-12 pb-16 sm:pb-20 games-grid-stop">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between gap-4">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+        Game We <span class="text-limeEgg">Built</span>
+      </h2>
+
+      <a href="#" class="text-sm sm:text-base text-white/80 hover:text-white transition">
+        View All
+      </a>
+    </div>
+
+    <!-- Cards -->
+    <div class="mt-8 sm:mt-10 grid gap-6 lg:gap-7 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+      {% set games = [
+        { img: "/assets/img/game1.png", title: "Lorem ipsum orci", date: "OCT 07, 5:10 AM" },
+        { img: "/assets/img/game2.png", title: "Lorem ipsum orci", date: "OCT 07, 5:10 AM" },
+        { img: "/assets/img/game3.png", title: "Lorem ipsum orci", date: "OCT 07, 5:10 AM" }
+      ] %}
+
+      {% for g in games %}
+      <article class="glass subtle-outline rounded-2xlplus p-4 sm:p-5 shadow-md">
+        <div class="relative rounded-2xl overflow-hidden">
+          <img src="{{ g.img }}" alt="{{ g.title }}" class="w-full aspect-[4/3] object-cover" />
+
+          <div class="absolute top-3 right-3 glass subtle-outline rounded-xl px-3 py-1.5 text-xs sm:text-sm text-white/90 flex items-center gap-2">
+            <i class="bi bi-calendar3 text-[14px] opacity-90"></i>
+            <span>{{ g.date }}</span>
+          </div>
+        </div>
+
+        <h3 class="mt-4 text-lg sm:text-xl font-bold text-white">
+          {{ g.title }}
+        </h3>
+        <p class="mt-2 text-sm text-white/55 leading-relaxed">
+          Lorem ipsum dolor sit amet consectetur. Ut eget donec vel...
+        </p>
+
+        <div class="mt-4 glass subtle-outline rounded-2xl px-4 py-3 flex items-center justify-between">
+          <a href="#" class="text-sm sm:text-base text-white/85 hover:text-white transition">
+            See Details
+          </a>
+          <a href="#" class="h-10 w-10 rounded-full bg-limeEgg text-black grid place-items-center hover:brightness-95 transition">
+            <i class="bi bi-arrow-right text-[18px]"></i>
+          </a>
+        </div>
+      </article>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>

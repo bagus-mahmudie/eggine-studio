@@ -1,0 +1,138 @@
+---
+layout: base.njk
+title: Contact Us
+---
+
+<section class="egg-grid-wrap games-grid-stop-mid relative overflow-hidden" data-contact-page>
+  <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
+    {% include "partials/navbar.njk" %}
+
+    <div
+    class="absolute
+            left-[-100px] sm:left-[-80px] md:left-[-80px]       
+            lg:left-[-50px]                    
+            top-[50px] sm:top-[150px]
+            h-[200px] w-[200px]
+            rounded-full bg-limeEgg/50 blur-[150px] md:blur-[180px]"
+    ></div>
+
+    <div class="mt-10 sm:mt-12 lg:mt-14 grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+      <!-- LEFT -->
+      <div class="lg:col-span-7 lg:pt-16">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-medium text-white leading-[1.15]">
+          Contact Us
+        </h1>
+
+        <!-- ARROW DECOR (desktop only) -->
+        <div class="hidden lg:block  relative">
+            <div class="pointer-events-none absolute
+                        right-20 top-10
+                        hidden lg:block">
+            <img
+                src="/assets/img/arrow.png"
+                alt="decorative arrow"
+                class="w-25 h-auto rotate-[-8deg]"
+            />
+            </div>
+        </div>
+
+        <p class="mt-5 max-w-md text-white/55 text-sm sm:text-lg leading-relaxed">
+          Email us, call, or complete the form to discover how Eggine Studio brings your game ideas to life.
+        </p>
+
+        <div class="mt-6 space-y-3 text-white/60 text-sm sm:text-lg">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-ink ring-1 ring-white/10">
+              <i class="bi bi-envelope"></i>
+            </span>
+            <span>hello@eggine.com</span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-ink ring-1 ring-white/10">
+              <i class="bi bi-telephone"></i>
+            </span>
+            <span>+62 812-3456-7890</span>
+          </div>
+        </div>
+
+      </div>
+      
+      <!-- RIGHT / FORM CARD -->
+      <div class="lg:col-span-5">
+        <div class="rounded-3xl glass subtle-outline shadow-soft p-5 sm:p-6">
+          <div class="mb-4">
+            <h2 class="text-2xl font-medium text-white/95">Get in Touch</h2>
+            <p class="mt-1 text-sm text-white/55">You can reach us anytime</p>
+          </div>
+
+          <form class="space-y-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <input
+                type="text"
+                placeholder="First name"
+                class="w-full h-11 rounded-xl bg-ink text-white placeholder:text-white/60 px-4
+                       ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-limeEgg/35"
+              />
+              <input
+                type="text"
+                placeholder="Last name"
+                class="w-full h-11 rounded-xl bg-ink text-white placeholder:text-white/60 px-4
+                       ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-limeEgg/35"
+              />
+            </div>
+
+            <div class="relative">
+              <span class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-white/60">
+                <i class="bi bi-envelope"></i>
+              </span>
+              <input
+                type="email"
+                placeholder="Your email"
+                class="w-full h-11 rounded-xl bg-ink text-white placeholder:text-white/60 pl-11 pr-4
+                       ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-limeEgg/35"
+              />
+            </div>
+
+            <div class="relative">
+              <span class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-white/60">
+                <i class="bi bi-telephone"></i>
+              </span>
+              <input
+                type="tel"
+                placeholder="Phone number"
+                class="w-full h-11 rounded-xl bg-ink text-white placeholder:text-white/60 pl-11 pr-4
+                       ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-limeEgg/35"
+              />
+            </div>
+
+            <textarea
+              rows="5"
+              placeholder="How can we Help?"
+              class="w-full rounded-2xl bg-ink text-white placeholder:text-white/60 p-4
+                     ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-limeEgg/35 resize-none"
+            ></textarea>
+
+            <button
+              type="submit"
+              class="w-full h-11 rounded-xl bg-limeEgg text-black font-semibold
+                     shadow-[0_0_0_1px_rgba(163,230,53,0.35)]
+                     hover:brightness-105 transition"
+            >
+              Submit
+            </button>
+
+            <p class="text-sm text-white/45 leading-relaxed pt-1">
+              By contacting us, you agree to our
+              <a href="#" class="text-white/80 hover:text-white underline underline-offset-2">Terms of service</a>
+              and
+              <a href="#" class="text-white/80 hover:text-white underline underline-offset-2">Privacy Policy</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include "partials/footer.njk" %}
+</section>

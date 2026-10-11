@@ -1,0 +1,24 @@
+{
+  "name": "eggine-redesign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "dev:css": "tailwindcss -i ./src/styles/tailwind.css -o ./_site/assets/css/style.css --watch",
+  "dev:11ty": "eleventy --serve",
+  "dev": "concurrently \"npm:dev:css\" \"npm:dev:11ty\"",
+  "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./_site/assets/css/style.css --minify",
+  "build": "npm run build:css && eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "autoprefixer": "^10.4.23",
+    "concurrently": "^9.2.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19"
+  }
+}

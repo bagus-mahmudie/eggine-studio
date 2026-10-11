@@ -1,0 +1,311 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* =========================================================
+     Base Grid (optional jika masih dipakai di section lain)
+  ========================================================== */
+  .egg-grid-bg {
+    background-color: #0A0C19;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,.06) 1px, transparent 1px);
+    background-size: 100px 100px;
+    background-position: center;
+  }
+
+  /* =========================================================
+     Glass UI
+  ========================================================== */
+  .glass {
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.10);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .subtle-outline {
+    box-shadow: 0 0 0 1px rgba(255,255,255,.10) inset;
+  }
+
+  .rounded-2xlplus { border-radius: 22px; }
+  .shadow-soft { box-shadow: 0 18px 55px rgba(0,0,0,.45); }
+  /* =========================================================
+     WRAPPER GRID: hanya untuk HERO + GAMES (1 section besar)
+     - Grid tampil di background wrapper
+  ========================================================== */
+  .egg-grid-wrap{
+    position: relative;
+    background: #0A0C19;
+  }
+
+  /* GRID layer */
+  .egg-grid-wrap::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,.06) 1px, transparent 1px);
+    background-size: 90px 90px;
+    background-position: top center;
+    z-index: 0;
+  }
+
+  /* Konten di atas grid */
+  .egg-grid-wrap > *{
+    position: relative;
+    z-index: 1;
+  }
+
+  /* =========================================================
+     STOP GRID setelah header "Game We Built"
+     - Grid masih terlihat sampai bawah judul
+     - Setelah itu area cards bersih (tanpa grid)
+  ========================================================== */
+  .games-grid-stop{
+    position: relative;
+  }
+
+  .games-grid-stop::before{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+
+    /* mulai menutup grid: setelah area header */
+    top: 92px;   /* mobile default */
+    bottom: 0;
+
+    pointer-events:none;
+
+    /* fade halus dari transparan ke solid background */
+    background: linear-gradient(
+      to bottom,
+      rgba(10,12,25,0) 0%,
+      rgba(10,12,25,1) 22%
+    );
+
+    z-index: 0;
+  }
+
+  .games-grid-stop > *{
+    position: relative;
+    z-index: 1;
+  }
+
+  /* responsive: header lebih tinggi, jadi titik stop turun sedikit */
+  @media (min-width: 640px){
+    .games-grid-stop::before{ top: 104px; }
+  }
+  @media (min-width: 1024px){
+    .games-grid-stop::before{ top: 118px; }
+  }
+
+    /* =========================================================
+     WHY SECTION (Why Gamers Choose)
+  ========================================================== */
+  .why-card{
+    position: relative;
+    padding: 20px;
+    border-radius: 26px;
+    background:
+      radial-gradient(1200px 500px at 20% 0%, rgba(255,255,255,.07), rgba(255,255,255,.03) 80%, rgba(255,255,255,.02) 100%);
+    border: 1px solid rgba(255,255,255,.10);
+    overflow: hidden;
+  }
+
+
+  .why-card > *{
+    position: relative;
+    z-index: 1;
+  }
+
+  .why-pill{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+    padding:.5rem .75rem;
+    border-radius: 9999px;
+    background: rgba(0,0,0,.28);
+    border: 1px solid rgba(255,255,255,.12);
+    color: rgba(255,255,255,.85);
+    font-size: .9rem;
+    box-shadow: 0 12px 26px rgba(0,0,0,.35);
+  }
+
+  @media (min-width: 640px){
+    .why-card{ padding: 26px; border-radius: 30px; }
+    .why-pill{ font-size: .95rem; padding:.55rem .85rem; }
+  }
+
+  /* =========================================================
+    STOP GRID KHUSUS PAGE GAMES (mid page)
+  ========================================================= */
+  .games-grid-stop-mid{
+    position: relative;
+  }
+
+  /* overlay penutup grid (di atas grid ::before) */
+  .games-grid-stop-mid::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+
+    /* titik mulai stop grid (atur sesuai kebutuhan) */
+    top: 720px;   /* mobile */
+    bottom: 0;
+
+    pointer-events:none;
+
+    /* fade halus ke background */
+    background: linear-gradient(
+      to bottom,
+      rgba(10,12,25,0) 0%,
+      rgba(10,12,25,1) 18%
+    );
+
+    /* harus lebih tinggi dari grid (::before z-index:0) dan konten wrapper (z-index:1) */
+    z-index: 2;
+  }
+
+  /* pastikan konten tetap di atas overlay */
+  .games-grid-stop-mid > *{
+    position: relative;
+    z-index: 3;
+  }
+
+  /* responsive: titik stop turun sedikit */
+  @media (min-width: 640px){
+    .games-grid-stop-mid::after{ top: 780px; }
+  }
+  @media (min-width: 1024px){
+    .games-grid-stop-mid::after{ top: 500px; }
+  }
+
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .job-card {
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015)),
+        #0A0C19;
+    }
+
+    /* border glass – fokus bawah kiri */
+    .job-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 2px;
+
+      background: linear-gradient(
+        45deg,
+        rgba(255,255,255,.5),
+        rgba(255,255,255,.08) 35%,
+        rgba(255,255,255,.03) 55%,
+        rgba(255,255,255,0) 70%
+      );
+
+      -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+
+      pointer-events: none;
+    }
+
+    /* HILANGKAN glossy top */
+    .job-card::after {
+      display: none;
+    }
+
+
+    /* ===== About Owl: simple + stable peek carousel ===== */
+.about-owl,
+.about-owl .owl-stage-outer {
+  width: 100%;
+  overflow: hidden; /* kunci supaya ngga bikin horizontal scroll */
+}
+
+/* Biar swipe halus */
+.about-owl .owl-stage {
+  display: block;
+}
+
+/* Item tidak boleh melebar */
+.about-owl .owl-item {
+  height: auto;
+}
+
+.about-owl .owl-item,
+.about-owl .owl-item > * {
+  max-width: 100%;
+}
+
+/* Card harus ikut lebar item */
+.about-owl .about-card {
+  width: 100%;
+  max-width: 100%;
+  transition: transform .35s ease, opacity .35s ease, filter .35s ease;
+  will-change: transform;
+}
+
+/* Side cards lebih “redup” seperti screenshot */
+.about-owl .owl-item:not(.center) .about-card {
+  opacity: 0.65;
+  filter: saturate(.95);
+  transform: scale(0.94);
+}
+
+/* Center card lebih tegas */
+.about-owl .owl-item.center .about-card {
+  opacity: 1;
+  filter: none;
+  transform: scale(1);
+}
+
+/* FAQ big card slide-in from right -> left */
+.faq-big.anim-in {
+  animation: faqSlideIn .32s ease-out both;
+}
+
+@keyframes faqSlideIn {
+  from { transform: translateX(18px); opacity: .55; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+/* optional: kecilkan klik feel */
+.faq-small:active {
+  transform: scale(.99);
+}
+/* clone overlay for swap */
+.faq-swap-clone{
+  position: fixed;
+  left: 0; top: 0;
+  margin: 0 !important;
+  z-index: 9999;
+  pointer-events: none;
+
+  /* penting: jangan ikut layout page */
+  overflow: hidden;
+  contain: layout paint;
+  will-change: left, top, width, height, opacity;
+  backface-visibility: hidden;
+}
+
+/* Pastikan style BIG selalu konsisten (clone & asli) */
+.faq-big-card[data-faq-role="big"] [data-faq-q] { font-size: 1.125rem; } /* text-lg */
+.faq-big-card[data-faq-role="big"] [data-faq-a] { font-size: 1rem; }     /* text-base */
+
+/* SMALL: hanya judul, tidak ada jawaban */
+.faq-small-card[data-faq-role="small"] [data-faq-q] { font-size: 1.125rem; } /* text-lg */
+
+
+}

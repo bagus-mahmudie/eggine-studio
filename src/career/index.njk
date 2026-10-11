@@ -1,0 +1,365 @@
+---
+layout: base.njk
+title: Career
+---
+
+<section class="egg-grid-wrap games-grid-stop-mid relative overflow-hidden" data-career-page>
+  <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
+    {% include "partials/navbar.njk" %}
+
+    <div
+    class="absolute
+            left-[-100px] sm:left-[-80px] md:left-[-80px]       
+            lg:left-[-50px]                    
+            top-[50px] sm:top-[150px]
+            h-[250px] w-[250px]
+            md:h-[300px] md:w-[300px]
+            rounded-full bg-limeEgg/50 blur-[185px] md:blur-[185px]"
+    ></div>
+
+
+    <!-- HERO -->
+    <div class="mt-10 sm:mt-12 lg:mt-10 grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+      <!-- LEFT -->
+      <div class="lg:col-span-6 ">
+
+        <h1 class="font-semibold leading-[1.15] sm:leading-[1.18] lg:leading-[1.2] text-4xl sm:text-5xl lg:text-6xl">
+            Join the <span class="text-limeEgg">Mission</span>,<br class="hidden sm:block" />
+            Build Legendary<br class="hidden sm:block" />
+            Games
+        </h1>
+
+        <p class="mt-5 max-w-md text-white/55 text-md sm:text-lg leading-relaxed">
+          Be part of a team crafting unforgettable experiences that players around the world will always remember.
+        </p>
+
+        <!-- Search Bar -->
+        <div class="mt-7 sm:mt-16">
+          <div class="rounded-2xl bg-[#181a26] solid ring-1 ring-white/10 shadow-md p-2 sm:p-2.5 ">
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-2">
+              <!-- keyword -->
+              <div class="sm:col-span-6 relative">
+                <span class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-white/85">
+                  <i class="bi bi-briefcase"></i>
+                </span>
+                <input
+                  type="text"
+                  placeholder="Job title or keywords"
+                  class="w-full h-11 rounded-xl bg-[#181a26] text-white placeholder:text-white/85 pl-11 pr-4
+                         ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-limeEgg/35"
+                />
+              </div>
+
+             <div class="sm:col-span-5 relative">
+                <span class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-white/85">
+                  <i class="bi bi-clock"></i>
+                </span>
+
+                <select
+                  class="appearance-none w-full h-11 rounded-xl bg-[#181a26] text-white/85
+                        pl-11 pr-12
+                        ring-1 ring-white/10
+                        focus:outline-none focus:ring-2 focus:ring-limeEgg/35"
+                >
+                  <option>Full Time</option>
+                  <option>Part Time</option>
+                  <option>Contract</option>
+                  <option>Internship</option>
+                </select>
+
+                <!-- custom arrow -->
+                <span class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/50">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </div>
+
+
+              <!-- button -->
+              <div class="sm:col-span-1">
+                <button
+                  type="button"
+                  class="w-full h-11 rounded-xl bg-limeEgg text-black font-semibold
+                         shadow-[0_0_0_1px_rgba(163,230,53,0.35)]
+                         hover:brightness-105 transition inline-flex items-center justify-center"
+                  aria-label="Search"
+                >
+                  <i class="bi bi-search text-lg"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="lg:col-span-6 relative">
+
+        <!-- HERO IMAGE (1 img only) -->
+        <div class="relative items-start mx-auto max-w-[560px] lg:ml-auto">
+          <img
+            src="/assets/img/career/hero_career.png"
+            alt="Career hero"
+            class="w-auto h-fit p-12 pt-0"
+            loading="lazy"
+          />
+
+        </div>
+      </div>
+    </div>
+
+    <div
+    class="absolute
+            right-[-100px] sm:right-[-80px] md:right-[-80px]       
+            lg:right-[-50px]                    
+            top-[650px] sm:top-[650px]
+            h-[250px] w-[250px]
+            md:h-[300px] md:w-[300px]
+            rounded-full bg-limeEgg/50 blur-[185px] md:blur-[185px]"
+    ></div>
+
+    <!-- STEPS (match design) -->
+    <div class="mt-14 sm:mt-16 lg:my-24">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-6 lg:gap-10">
+
+        <!-- Step 1 -->
+        <div class="relative text-center">
+          <!-- Diamond -->
+          <div class="mx-auto relative h-[120px] w-[120px]">
+            <div
+              class="absolute inset-0 rotate-45 rounded-[28px]
+                    bg-[#181a26]
+                    ring-1 ring-white/10 shadow-soft"
+            ></div>
+            <div class="absolute inset-0 flex items-center justify-center text-white/85">
+              <i class="bi bi-search text-4xl"></i>
+            </div>
+          </div>
+
+          <!-- Text -->
+          <h3 class="mt-7 text-2xl font-medium text-white/95">Quick Jobs</h3>
+          <p class="mt-2 text-sm sm:text-base text-white/55 max-w-[240px] mx-auto leading-relaxed">
+            Instant access to roles that need you now.
+          </p>
+
+          <!-- ↓ Arrow (mobile) -->
+          <div class="sm:hidden mt-7 flex items-center justify-center">
+            <i class="bi bi-arrow-down text-limeEgg text-4xl"></i>
+          </div>
+
+          <!-- → Arrow (desktop) -->
+          <div class="hidden sm:flex absolute top-[40px] -right-6 lg:-right-10 items-center justify-center">
+            <i class="bi bi-arrow-right text-limeEgg text-4xl"></i>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative text-center">
+          <!-- Diamond -->
+          <div class="mx-auto relative h-[120px] w-[120px]">
+            <div
+              class="absolute inset-0 rotate-45 rounded-[28px]
+                    bg-[#181a26]
+                    ring-1 ring-white/10 shadow-soft"
+            ></div>
+            <div class="absolute inset-0 flex items-center justify-center text-white/85">
+              <i class="bi bi-envelope-paper text-4xl"></i>
+            </div>
+          </div>
+
+          <h3 class="mt-7 text-2xl font-medium text-white/95">CV/Resume</h3>
+          <p class="mt-2 text-sm sm:text-base text-white/55 max-w-[240px] mx-auto leading-relaxed">
+            Show us your skills and experience instantly.
+          </p>
+
+          <!-- ↓ Arrow (mobile) -->
+          <div class="sm:hidden mt-7 flex items-center justify-center">
+            <i class="bi bi-arrow-down text-limeEgg text-4xl"></i>
+          </div>
+
+          <!-- → Arrow (desktop) -->
+          <div class="hidden sm:flex absolute top-[40px] -right-6 lg:-right-10 items-center justify-center">
+            <i class="bi bi-arrow-right text-limeEgg text-4xl"></i>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="text-center">
+          <div class="mx-auto relative h-[120px] w-[120px]">
+            <div
+              class="absolute inset-0 rotate-45 rounded-[28px]
+                    bg-[#181a26]
+                    ring-1 ring-white/10 shadow-soft"
+            ></div>
+            <div class="absolute inset-0 flex items-center justify-center text-white/85">
+              <i class="bi bi-upload text-4xl"></i>
+            </div>
+          </div>
+
+          <h3 class="mt-7 text-2xl font-medium text-white/95">Apply them</h3>
+          <p class="mt-2 text-sm sm:text-base text-white/55 max-w-[240px] mx-auto leading-relaxed">
+            Submit your resume and get started fast.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <!-- CAREER OPPORTUNITIES -->
+    <div class="mt-16 sm:mt-20">
+      <h2 class="text-4xl sm:text-5xl font-medium text-white leading-[1.12]">
+        Career <span class="text-limeEgg">Opportunities</span>
+      </h2>
+
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        {% set jobs = [
+          { title:"UI/UX Designer", price:"Rp 12.000.000", loc:"West Jakarta", icon:"bi-bezier2" },
+          { title:"Game Developer", price:"Rp 9.000.000", loc:"West Jakarta", icon:"bi-code-slash" },
+          { title:"Game Designer", price:"Rp 8.000.000", loc:"West Jakarta", icon:"bi-controller" },
+          { title:"Narrative Designer", price:"Rp 5.500.000", loc:"West Jakarta", icon:"bi-pen" },
+          { title:"Programmer", price:"Rp 8.000.000", loc:"West Jakarta", icon:"bi-cpu" },
+          { title:"QA Tester", price:"Rp 15.000.000", loc:"West Jakarta", icon:"bi-bug" }
+        ] %}
+
+        {% for j in jobs %}
+        <article class="job-card relative rounded-2xl p-5 !bg-[#141622] overflow-hidden">
+          <div class="flex items-start gap-3">
+            <div class="inline-flex h-12 w-12 text-xl items-center justify-center rounded-full bg-[#181a26] ring-1 ring-white/10 text-white/75">
+              <i class="bi {{ j.icon }}"></i>
+            </div>
+            <div class="min-w-0">
+              <h3 class="text-xl font-medium text-white/90 leading-tight">{{ j.title }}</h3>
+              <p class="mt-1 text-sm text-white/50">Open 6–10 August 2025</p>
+            </div>
+          </div>
+
+          <p class="mt-4 text-base text-white/55 leading-relaxed">
+            Lorem ipsum dolor sit amet consectetur. Fusce enim magnis volutpat sem...
+          </p>
+
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="inline-flex px-3 py-1 rounded-lg bg-[#FFF6451A]
+                        text-base text-white/80 ring-1 ring-white/10 whitespace-nowrap">
+              Full Time
+            </span>
+            <span class="inline-flex px-3 py-1 rounded-lg bg-[#FFF6451A]
+                        text-base text-white/80 ring-1 ring-white/10 whitespace-nowrap">
+              Onsite
+            </span>
+            <span class="inline-flex px-3 py-1 rounded-lg bg-[#FFF6451A]
+                        text-base text-white/80 ring-1 ring-white/10 whitespace-nowrap">
+              Entry Level
+            </span>
+          </div>
+
+          <div class="mt-5 h-px bg-white/10"></div>
+
+          <div class="mt-4 flex items-center justify-between">
+            <div>
+              <div class="text-lg font-medium text-white/90">{{ j.price }}</div>
+              <div class="text-sm text-white/50">{{ j.loc }}</div>
+            </div>
+
+            <a href="#"
+               class="inline-flex items-center justify-center h-9 px-5 rounded-xl bg-limeEgg text-black font-semibold
+                      shadow-[0_0_0_1px_rgba(163,230,53,0.35)] hover:brightness-105 transition">
+              Details
+            </a>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+
+    <!-- CTA -->
+    <div class="relative bg-ink py-16 sm:py-20 overflow-hidden">
+      <!-- GRID background -->
+      <div class="pointer-events-none absolute inset-0 -z-10">
+
+        <div
+        class="absolute
+                left-[-200px] sm:left-[-80px] md:left-[-80px]       
+                lg:left-[-50px]                    
+                top-[30px] sm:top-[150px]
+                h-[180px] w-[180px]
+                rounded-full bg-limeEgg/50 blur-[150px] md:blur-[180px]"
+        ></div>
+
+        <div
+        class="absolute
+                right-[-200px] sm:right-[-80px] md:right-[-80px]       
+                lg:right-[-50px]                    
+                top-[30px] sm:top-[150px]
+                h-[180px] w-[180px]
+                rounded-full bg-limeEgg/50 blur-[150px] md:blur-[180px]"
+        ></div>
+
+      </div>
+
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.55]"
+        style="
+          background-image:
+            linear-gradient(to right, rgba(255,255,255,.1) 1px, transparent 2px),
+            linear-gradient(to bottom, rgba(255,255,255,.1) 1px, transparent 2px);
+          background-size: 90px 90px;
+          background-position: center;
+        "
+      ></div>
+
+      <!-- Fade blur TOP -->
+      <div class="pointer-events-none absolute top-0 inset-x-0 h-24 sm:h-28">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0A0C19] to-transparent"></div>
+        <div class="absolute inset-0 blur-2xl bg-[#0A0C19]/70"></div>
+      </div>
+
+      <!-- Fade blur BOTTOM -->
+      <div class="pointer-events-none absolute bottom-0 inset-x-0 h-24 sm:h-28">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0A0C19] to-transparent"></div>
+        <div class="absolute inset-0 blur-2xl bg-[#0A0C19]/70"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl leading-[1.25] sm:leading-[1.3] lg:leading-[1.35] font-semibold text-white text-center">
+        <span class="block">Got <span class="text-limeEgg">Questions</span> About</span>
+        <span class="block">
+              Joining Our Team
+        </span>
+        </h2>
+
+        <p class="mt-8 text-white/45 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
+          We’re here to help if you need clarity about roles requirements or your application process.
+        </p>
+
+        <!-- Input -->
+        <form class="mt-12 flex justify-center">
+          <div
+            class="w-full max-w-xl rounded-2xl border border-white/10 bg-[#D6ED6B1A] shadow-[0_18px_55px_rgba(0,0,0,.45)]
+                  px-4 py-2 sm:px-5 sm:py-2 flex items-center gap-3"
+          >
+            <input
+              type="email"
+              placeholder="Contact Us"
+              class="w-full bg-transparent outline-none text-white/85 placeholder:text-white/45 text-base sm:text-lg"
+            />
+
+            <button
+              type="submit"
+              class="shrink-0 h-10 w-10 sm:h-11 sm:w-11 rounded-full bg-limeEgg text-black
+                    flex items-center justify-center shadow-[0_14px_28px_rgba(0,0,0,.35)]
+                    hover:brightness-95 transition"
+              aria-label="Submit"
+            >
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  {% include "partials/footer.njk" %}
+</section>
