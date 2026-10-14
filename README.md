@@ -4,6 +4,10 @@ Egginestudio company website featuring studio information, games, careers, and c
 
 **Status:** Live · [Visit website](https://egginestudio.com/)
 
+## Preview
+
+[![Egginestudio — application preview](docs/screenshots/project-preview.png)](docs/screenshots/project-preview.png)
+
 ## Features
 
 - Studio profile pages and game catalog
